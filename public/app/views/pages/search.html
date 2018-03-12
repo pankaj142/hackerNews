@@ -1,0 +1,100 @@
+  <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-body">
+           <div class="row">
+            <div style="margin-left: 15px; color:green ">
+              <h4 ><strong>Hacker News</strong></h4>
+              <h5>Best Hacker News Article</h5>
+            </div>
+             
+            <div class=" col-md-12 form-group">
+           
+            <div class="input-group">
+             <div class="input-group-addon">
+            <span class="glyphicon glyphicon-search"></span> 
+             </div>
+             <input class="form-control" id="email" name="email" type="text" ng-model="searchKeyword" placeholder="Search (by name)"/>
+             <div class="input-group-addon" ng-click="cancelSearch()">
+            <span class="glyphicon"> X</span> 
+             </div>
+            </div>
+
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+
+      
+<!-- sorting as per points and date/time -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="panel panel-default panel-order">
+        <div class="panel-heading">
+        <span style="font-size: 18px;" ><strong>Articles</strong></span> 
+          <div class="btn-group pull-right">
+            <div class="btn-group">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+              Order by points <i class="fa fa-filter"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="" ng-click="setAscendingOrder()">Ascending order</a></li>
+              <li><a href="" ng-click="setDescendingOrder()">Descending order</a></li>
+            </ul>
+            </div>
+
+            <div class="btn-group">
+            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+              Order by Date <i class="fa fa-filter"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li><a href="" ng-click="setDateAscendingOrder()">Ascending order</a></li>
+              <li><a href="" ng-click="setDateDescendingOrder()">Descending order</a></li>
+            </ul>
+            </div>
+          </div>
+        </div> <!-- sorting as per points and date/time ends-->
+
+
+<!-- list of articles-->
+        <div class="panel-body" dir-paginate="article in articles | filter : searchKeyword | orderBy : sortOrder  | itemsPerPage:7 ">
+              <div class="row">
+              <div class="col-md-1 new"> 
+                
+              </div>
+              <div class="col-md-11">
+              <div class="row">
+                <div class="col-md-12">
+                  <a href={{article.url}} target="_blank">
+                  <strong> {{$index +1}}.  {{article.title}}</strong> 
+                  
+                  </a>({{article.url | getWebsite}})
+                <br><br>
+                {{article.num_points}} points by {{article.author}}  | {{article.num_comments}} comments  
+                </div>
+
+                   <div class="col-md-6">
+                    <strong>Created on</strong> {{article.created_at | getDateTime}}</span>
+                  </div>
+                    
+                <div class="col-md-12">
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- list of articles ends-->
+
+        <!-- pagination -->
+         <dir-pagination-controls
+           max-size="5"
+           direction-links="true"
+           boundary-links="true" >
+        </dir-pagination-controls>
+        <!-- pagination ends-->
+
+        <!-- footer -->
+        <div class="panel-footer" style="font-size: 20px"><strong>©hackerNews.com 2018</strong></div>
+      </div>
+            </div>

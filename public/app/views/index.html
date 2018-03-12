@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title >Hackers News</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Pankaj Agham"> 
+  <!-- ui-grid CSS -->
+    <link href="assets/css/ui-grid.css" rel="stylesheet">
+
+  <!-- Angular Main files -->	
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular-route.min.js"></script>
+
+   <!--Angular Material files for dialog -->
+   <!-- Angular Material CSS now available via Google CDN; version 1.1.6 used here -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css">
+
+    <!-- Angular Material Dependencies -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js"></script>
+    
+    <!-- Angular Material Javascript now available via Google CDN; version 1.1.6 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.js"></script>
+    <!--Angular Material files for dialog ends-->
+
+
+    <!-- Angular config & routes -->
+	<script type="text/javascript" src="app/app.js"></script>
+  
+  <script type="text/javascript" src="assets/js/dirPagination.js"></script>
+  <script type="text/javascript" src="assets/js/dirPagination.tpl.html"></script>
+
+
+  <!-- top-nav style -->  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+  <!--font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- material icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- main style file  (apply this file after bootstrap.css)-->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+<style type="text/css">
+  .body{
+    background-color: #eaeaea;
+  }
+
+</style>
+<body ng-app="myApp" >	
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+        <div class="navbar-header">
+          <span class="text-muted" >
+                    
+                    <a href="/" 
+                     style="font-size: 30px;
+                     text-decoration: none; color: white;">
+                     <i class="material-icons" style="font-size: 30px; color:#5f6977">code</i>
+                   Hacker News</a>
+                   </span>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="/portfolio" 
+             style="font-size: 20px; color: white;"><span class="glyphicon glyphicon-home"></span> Porfolio</a></li>
+         
+        </ul>
+      </div>
+    </nav>
+
+<div class="container" ng-controller="searchController"> 
+  <div ng-view></div>
+</div>
+
+</body>
+</html> 
+
+</body>
+</html>

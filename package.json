@@ -1,0 +1,27 @@
+{
+  "name": "git_search_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pankaj142/githubSearch"
+  },
+  "keywords": [
+    "angularjs",
+    "expressjs",
+    "grid"
+  ],
+  "author": "Pankaj Agham",
+  "license": "ISC",
+  "dependencies": {
+    "angular-material": "^1.1.7",
+    "angular-utils-pagination": "^0.11.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  }
+}
