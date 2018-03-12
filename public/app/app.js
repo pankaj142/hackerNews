@@ -22,7 +22,7 @@ app.config(function($routeProvider,$locationProvider){
 });
 
 app.controller("searchController",function($scope, $http){
-	$http.get("http://starlord.hackerearth.com/hackernews")
+	$http.get("https://rawgit.com/pankaj142/hackerNews/master/hackernews.html")
          .then(function(response){
           $scope.articles=response.data;
           var firstItem=$scope.articles.shift();
